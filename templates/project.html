@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}{{ project.title }}{% endblock %}
+
+{% block content %}
+<h1>{{ project.title }}</h1>
+<p>{{ project.description }}</p>
+
+<h2>Технології</h2>
+<ul class="tags">
+    {% for t in project.tech %}
+    <li>{{ t }}</li>
+    {% endfor %}
+</ul>
+
+<p><a href="{{ url_for('index') }}">&larr; До всіх проєктів</a></p>
+{% endblock %}

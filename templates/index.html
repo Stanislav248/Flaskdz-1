@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Головна{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Привіт, я {{ me.name }}</h1>
+    <p>{{ me.bio }}</p>
+</section>
+
+<section>
+    <h2>Мої проєкти</h2>
+    <ul class="cards">
+        {% for p in projects %}
+        <li class="card">
+            <h3>{{ p.title }}</h3>
+            <p>{{ p.description }}</p>
+            <a href="{{ url_for('project', project_id=p.id) }}">Детальніше &rarr;</a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}

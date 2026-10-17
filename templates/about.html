@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Про мене{% endblock %}
+
+{% block content %}
+<h1>Про мене</h1>
+<p>{{ me.bio }}</p>
+<dl class="info">
+    <dt>Ім'я</dt><dd>{{ me.name }}</dd>
+    <dt>Вік</dt><dd>{{ me.age }}</dd>
+    <dt>Місто</dt><dd>{{ me.city }}</dd>
+</dl>
+{% endblock %}

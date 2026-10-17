@@ -1,0 +1,23 @@
+# Віртуальне середовище
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Flask
+instance/
+.flaskenv
+
+# Секрети та налаштування
+.env
+
+# Редактори та ОС
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
